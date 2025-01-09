@@ -1,0 +1,83 @@
+Tech Stack
+Frontend (React Native):
+React Native: For building cross-platform mobile apps.
+Redux/Context API: For state management.
+React Navigation: For handling app navigation.
+Axios/Fetch API: For API calls to the backend.
+Expo: Optional for quicker development setup and testing.
+Backend (Spring Boot with Java):
+Spring Boot: For RESTful API development.
+Spring Security: For user authentication and authorization.
+Hibernate: For object-relational mapping (ORM).
+MySQL/PostgreSQL: For storing user, product, order, and payment data.
+Swagger/OpenAPI: For API documentation.
+Payment Integration:
+Razorpay/Stripe/PayPal API: For online payment handling.
+DevOps & Hosting:
+Docker: For containerizing backend services.
+Kubernetes/GKE: For deployment and scaling (optional for later stages).
+AWS/GCP: For hosting backend services, storage, and databases.
+Others:
+JWT: For secure token-based user sessions.
+Postman: For testing APIs.
+Jenkins/GitHub Actions: For CI/CD pipeline.
+Architecture
+Frontend Architecture:
+Components:
+
+Login/Sign-Up Screen
+Product List Screen
+Product Details Screen
+Cart Screen
+Checkout Screen
+Order Status Screen
+State Management:
+
+Store user data, product list, and cart items globally.
+API Integration:
+
+Use Axios or Fetch for communication with backend APIs.
+Backend Architecture:
+Controller Layer:
+
+Handles incoming API requests.
+Endpoints for user authentication, product retrieval, cart management, order placement, and order status.
+Service Layer:
+
+Business logic for handling products, orders, and payments.
+Repository Layer:
+
+Interacts with the database using JPA.
+Database Tables:
+
+Users: For storing user details.
+Products: For storing product details.
+Orders: For tracking orders, payment status, and delivery status.
+Cart: Temporary storage for user cart data.
+Payment Gateway Integration:
+
+APIs to initiate and confirm payments.
+Order Status Management:
+
+Use WebSockets or polling to update the order status in real-time.
+Workflow
+Authentication:
+
+Users log in or sign up using their email and password.
+Backend validates credentials using Spring Security and generates JWT tokens.
+Product Listing:
+
+Backend fetches all available products from the database.
+Frontend displays these products in a scrollable list.
+Cart Management:
+
+User adds products to the cart.
+Cart data is stored locally or sent to the backend.
+Order Placement:
+
+User checks out from the cart.
+Backend processes the order and updates the database.
+Payment status is handled based on user selection (online or COD).
+Order Status:
+
+Status transitions from PLACED → DISPATCHED → DELIVERED.
